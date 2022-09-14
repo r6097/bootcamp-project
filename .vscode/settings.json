@@ -1,0 +1,14 @@
+{
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.detectIndentation": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "files.autoSave": "afterDelay",
+    "window.autoDetectColorScheme": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "vscode-pets.petSize": "medium",
+    "vscode-pets.position": "explorer",
+    "vscode-pets.petColor": "white",
+    "vscode-pets.petType": "cat",
+    "vscode-pets.theme": "none"
+}
