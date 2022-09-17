@@ -8,7 +8,7 @@ function Wishlist( props ) {
     const [likedProducts, setLikedProducts] = useState([]);
 
     useEffect(() => {
-        getLikedProducts()
+        getLikedProducts(); 
     }, [likedProducts]);
 
     function sanityCheck() {

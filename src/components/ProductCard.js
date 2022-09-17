@@ -5,29 +5,13 @@ import { Card, Row, Col } from 'react-bootstrap';
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 
 function ProductCard( productDetails ) {
-	// remove 
 	const [clicked, setClicked] = useState(productDetails.liked);
 
-	
+	// implement toggle click, setClicked
 	function toggleClick() {
-		// remove 
-		setClicked(!clicked);
 	}
 
-	// remove
-	useEffect(() => {
-		if (clicked !== productDetails.liked) {
-			axios.put("http://localhost:5000/products/update/" + productDetails.id, {
-				liked: clicked
-			})
-			.then(response => {
-				console.log(response);
-			})
-			.catch(error => {
-				console.log(error);
-			});
-		}
-    }, [clicked]);
+	// add a useeffect to update product's liked status with axios
 
 	useEffect(() => {
 		if (productDetails.liked !== clicked) {
@@ -36,15 +20,12 @@ function ProductCard( productDetails ) {
 	}, [productDetails.liked]);
 
 	return (
-		// remove some {productDetails...}
 		<div className="product-card">
 			<Card>
 				<Card.Img className="product-img" src={productDetails.img} alt="product image" />
 				<Card.Body>
 					<Card.Title className="product-name">{productDetails.name} </Card.Title>
-					<Row className="product-desc">
-						{productDetails.description} 
-					</Row>
+					{/* add a row for product details. description */}
 					<Row className="product-price">
 						${productDetails.price} 
 					</Row>

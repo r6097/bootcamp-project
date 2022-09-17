@@ -9,18 +9,10 @@ function Home() {
 
 	const [products, setProducts] = useState([]);
 
-	// remove 
-    useEffect(() => {
-        axios
-            .get('http://localhost:5000/products/get-all-products')
-            .then(response => {
-				setProducts(response.data);
-			});
-    }, [products]);
+	// TODO: implement useEffect (Refer to Notion Guide Step #)
 
-	// remove 
+	// TODO: implement console log for sanity check (Refer to Notion Guide Step #)
 	function sanityCheck() {
-		console.log(products);
 	}
 
 	return (
