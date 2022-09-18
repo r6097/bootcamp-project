@@ -12,7 +12,20 @@ function ProductCard( productDetails ) {
 
 	}
 
-	// add a useeffect to update product's liked status with axios (Refer to Notion Guide Step # 4)
+	useEffect(() => {
+		if (clicked !== productDetails.liked) {
+			axios.put("http://localhost:5000/products/update/" + productDetails.id, {
+				liked: clicked
+			})
+			.then(response => {
+				console.log(response);
+			})
+			.catch(error => {
+				console.log(error);
+			});
+		}
+    }, [clicked]);
+
 	useEffect(() => {
 		if (productDetails.liked !== clicked) {
 			setClicked(productDetails.liked);
@@ -25,7 +38,7 @@ function ProductCard( productDetails ) {
 				<Card.Img className="product-img" src={productDetails.img} alt="product image" />
 				<Card.Body>
 					<Card.Title className="product-name">{productDetails.name} </Card.Title>
-					{/* add a row for product details. description (Refer to Notion Guide Step # 5)*/}
+					{/* add a row for product details. description (Refer to Notion Guide Step # 4)*/}
 					<Row className="product-price">
 						${productDetails.price} 
 					</Row>
