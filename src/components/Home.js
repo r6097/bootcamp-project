@@ -9,9 +9,12 @@ function Home() {
 
 	const [products, setProducts] = useState([]);
 
-	// TODO: implement useEffect (Refer to Notion Guide Step #)
+	// implement useEffect (Refer to Notion Guide Step # 1)
+	useEffect(() => {
 
-	// TODO: implement console log for sanity check (Refer to Notion Guide Step #)
+    }, [products]);
+
+	// implement console log for sanity check (Refer to Notion Guide Step # 2)
 	function sanityCheck() {
 	}
 
