@@ -7,12 +7,12 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 function ProductCard( productDetails ) {
 	const [clicked, setClicked] = useState(productDetails.liked);
 
-	// implement toggle click, setClicked
+	// implement toggle click using setClicked (Refer to Notion Guide Step # 3)
 	function toggleClick() {
+
 	}
 
-	// add a useeffect to update product's liked status with axios
-
+	// add a useeffect to update product's liked status with axios (Refer to Notion Guide Step # 4)
 	useEffect(() => {
 		if (productDetails.liked !== clicked) {
 			setClicked(productDetails.liked);
@@ -25,7 +25,7 @@ function ProductCard( productDetails ) {
 				<Card.Img className="product-img" src={productDetails.img} alt="product image" />
 				<Card.Body>
 					<Card.Title className="product-name">{productDetails.name} </Card.Title>
-					{/* add a row for product details. description */}
+					{/* add a row for product details. description (Refer to Notion Guide Step # 5)*/}
 					<Row className="product-price">
 						${productDetails.price} 
 					</Row>
