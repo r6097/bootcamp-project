@@ -16,6 +16,7 @@ function Home() {
 
 	// implement console log for sanity check (Refer to Notion Guide Step # 2)
 	function sanityCheck() {
+		
 	}
 
 	return (
