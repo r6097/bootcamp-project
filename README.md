@@ -39,6 +39,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### `npm run lint`
+
+Runs the eslint configuration for all JavaScript files.\
+You should use this script after making major changes and before committing.
+
+### `npm run lint --fix`
+
+This fixes most, if not all errors relating to eslint.\
+This should be the fallback in case you've made too many changes without running the linter. It is still good practice to make small changes, lint, and then commit.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
