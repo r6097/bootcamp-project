@@ -44,7 +44,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 Runs the eslint configuration for all JavaScript files.\
 You should use this script after making major changes and before committing.
 
-### `npm run lint --fix`
+### `npm run lint -- --fix`
 
 This fixes most, if not all errors relating to eslint.\
 This should be the fallback in case you've made too many changes without running the linter. It is still good practice to make small changes, lint, and then commit.
