@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Button, Col, Modal, Row } from "react-bootstrap";
-import { AiOutlineClose } from "react-icons/ai";
 import "../css/Wishlist.css";
+import { Button, Col, Modal, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import axios from "axios";
 
-function Wishlist( props ) {
+function Wishlist( wishlistDetails ) {
 	const [likedProducts, setLikedProducts] = useState([]);
 
 	useEffect(() => {
@@ -45,7 +45,7 @@ function Wishlist( props ) {
 	}
 	return (
 		<div>
-			<Modal show={props.displayModal} onHide={props.close} centered restoreFocus={false}>
+			<Modal show={wishlistDetails.displayModal} onHide={wishlistDetails.close} centered restoreFocus={false}>
 				<Modal.Header closeButton>
 					<Modal.Title> Items in Wishlist </Modal.Title>
 				</Modal.Header>

@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
-// import axios from "axios"; <-- UNCOMMENT THIS
-import {Button, Container, Row} from "react-bootstrap";
-import ProductCard from "./ProductCard";
-import Navbar from "./Navbar";
 import "../css/Home.css";
+import { Button, Container, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar";
+import ProductCard from "./ProductCard";
+import axios from "axios";
 
 function Home() {
 

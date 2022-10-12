@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import "../css/Navbar.css";
 import { Button, Col, Row } from "react-bootstrap";
+import React, { useState } from "react";
 import Wishlist from "./Wishlist";
 import logo from "../logo.png";
 

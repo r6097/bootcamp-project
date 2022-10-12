@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 import "../css/ProductCard.css";
 import { Card, Col, Row } from "react-bootstrap";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function ProductCard( productDetails ) {
 	const [clicked, setClicked] = useState(productDetails.liked);
