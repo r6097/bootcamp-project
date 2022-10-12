@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import '../css/ProductCard.css'
-import { Card, Row, Col } from 'react-bootstrap';
+import "../css/ProductCard.css";
+import { Card, Col, Row } from "react-bootstrap";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 
 function ProductCard( productDetails ) {
@@ -17,14 +17,14 @@ function ProductCard( productDetails ) {
 			axios.put("http://localhost:5000/products/update/" + productDetails.id, {
 				liked: clicked
 			})
-			.then(response => {
-				console.log(response);
-			})
-			.catch(error => {
-				console.log(error);
-			});
+				.then(response => {
+					console.log(response);
+				})
+				.catch(error => {
+					console.log(error);
+				});
 		}
-    }, [clicked]);
+	}, [clicked]);
 
 	useEffect(() => {
 		if (productDetails.liked !== clicked) {
@@ -40,7 +40,7 @@ function ProductCard( productDetails ) {
 					<Card.Title className="product-name">{productDetails.name} </Card.Title>
 					{/* add a row for product details. description (Refer to Notion Guide Step # 4)*/}
 					<Row className="product-price">
-						${productDetails.price} 
+						${productDetails.price}
 					</Row>
 					<Row className="wishlist-row">
 						<Col md={6} className="wishlist-col">

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import '../css/Navbar.css';
-import { Row, Col, Button } from 'react-bootstrap';
-import Wishlist from './Wishlist';
-import logo from '../logo.png';
+import React, { useState } from "react";
+import "../css/Navbar.css";
+import { Button, Col, Row } from "react-bootstrap";
+import Wishlist from "./Wishlist";
+import logo from "../logo.png";
 
 function Navbar() {
 	const [showWishlist, setShow] = useState(false);
@@ -12,11 +12,11 @@ function Navbar() {
 		<div className="navbar">
 			<Row className="nav-row">
 				<Col md={2} className="nav-col">
-					<a href="https://www.codelabdavis.com"> 
-						<img src={logo} alt="Codelab Logo" /> 
+					<a href="https://www.codelabdavis.com">
+						<img src={logo} alt="Codelab Logo" />
 					</a>
 				</Col>
-				
+
 				<Col md={2} className="nav-col">
 					<Button onClick={handleShow}>View Wishlist</Button>
 				</Col>
