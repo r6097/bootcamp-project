@@ -11,12 +11,16 @@ function Home() {
 
 	// implement useEffect (Refer to Notion Guide Step # 1)
 	useEffect(() => {
-
+		axios.get("http://localhost:5000/products/get-all-products")
+			.then(res => {
+				setProducts(res.data);
+			})
+			.catch(err => console.log("Error" + err));
 	}, [products]);
 
 	// implement console log for sanity check (Refer to Notion Guide Step # 2)
 	function sanityCheck() {
-
+		console.log(products);
 	}
 
 	return (

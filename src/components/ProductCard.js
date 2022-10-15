@@ -9,7 +9,7 @@ function ProductCard( productDetails ) {
 
 	// implement toggle click using setClicked (Refer to Notion Guide Step # 3)
 	function toggleClick() {
-
+		setClicked(!clicked);
 	}
 
 	useEffect(() => {
@@ -38,7 +38,9 @@ function ProductCard( productDetails ) {
 				<Card.Img className="product-img" src={productDetails.img} alt="product image" />
 				<Card.Body>
 					<Card.Title className="product-name">{productDetails.name} </Card.Title>
-					{/* add a row for product details. description (Refer to Notion Guide Step # 4)*/}
+					<Row className="product-desc">
+						{productDetails.description}
+					</Row>
 					<Row className="product-price">
 						${productDetails.price}
 					</Row>
